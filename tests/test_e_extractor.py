@@ -1,4 +1,4 @@
-import pytest
+
 from lib.e_extractor import *
 
 # Return string without any "e" in it
