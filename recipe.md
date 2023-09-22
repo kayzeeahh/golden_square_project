@@ -1,3 +1,6 @@
+SINGLE METHOD RECIPE:
+
+
 EXERCISE ONE
 
 1. Describe the Problem
@@ -215,3 +218,99 @@ It returns message that task needs to be completed
 def test_check_for_todo():
     result = todo_list("#TODO learn some python programming")
     assert result == "This task is not completed"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+
+SINGLE CLASS DESIGN RECIPE:
+1. Describe the Problem
+Put or write the user story here. Add any clarifying notes you might have.
+> As a user
+> So that I can keep track of my phone numbers
+> I want to keep a record of all phone numbers in my diary entries 
+
+# look through many diary entries 
+# phone numbers are 11 digit numbers starting with zero
+
+
+2. Design the Class Interface
+Include the initializer, public properties, and public methods with all parameters, return values, and side-effects.
+
+# EXAMPLE
+
+class PhoneBook():
+    
+    def extract_numbers(self, diary_entry):
+        # Parameters:
+        #   task: string representing a single diary_entry
+        # Returns:
+        #   Nothing
+        # Side-effects
+        #   Saves the task to the self object
+        pass # No code here yet
+
+    def remind(self):
+        # Returns:
+        #   A string reminding the user to do the task
+        # Side-effects:
+        #   Throws an exception if no task is set
+        pass # No code here yet
+
+3. Create Examples as Tests
+Make a list of examples of how the class will behave in different situations.
+
+# EXAMPLE
+
+"""
+Given a name and a task
+#remind reminds the user to do the task
+"""
+reminder = Reminder("Kay")
+reminder.remind_me_to("Walk the dog")
+reminder.remind() # => "Walk the dog, Kay!"
+
+"""
+Given a name and no task
+#remind raises an exception
+"""
+reminder = Reminder("Kay")
+reminder.remind() # raises an error with the message "No task set."
+
+"""
+Given a name and an empty task
+#remind still reminds the user to do the task, even though it looks odd
+"""
+reminder = Reminder("Kay")
+reminder.remind_me_to("")
+reminder.remind() # => ", Kay!"
+
+4. Implement the Behaviour
+After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
