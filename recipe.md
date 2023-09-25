@@ -252,6 +252,7 @@ def test_check_for_todo():
 
 SINGLE CLASS DESIGN RECIPE:
 
+Exercise 1(Pair Programmed)
 1. Describe the Problem
 Put or write the user story here. Add any clarifying notes you might have.
 """
@@ -269,7 +270,7 @@ have them disappear from the list.
 Include the initializer, public properties, and public methods with all parameters, return values, and side-effects.
 
 # EXAMPLE
-class ToDo_List:
+class TaskTracker:
     def __init__(self):
     self._completed = completed
     self._incomplete = incomplete
@@ -312,3 +313,92 @@ def test_without_completed_task():
     assert result == [""]
 4. Implement the Behaviour
 After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Design a class(CHALLENGE):
+1. Describe the Problem
+Put or write the user story here. Add any clarifying notes you might have.
+"""
+As a user
+So that I can keep track of my music listening
+I want to add tracks I've listened to and see a list of them.
+"""
+2. Design the Class Interface
+Include the initializer, public properties, and public methods with all parameters, return values, and side-effects.
+
+# EXAMPLE
+class MusicTracker:
+    def add(string):
+    a string representing music you have listened to
+    returns a strings of music listened to in a list.
+    
+
+3. Create Examples as Tests
+Make a list of examples of how the class will behave in different situations.
+
+# EXAMPLE
+
+"""
+given an empty string
+return an error
+"""
+def test_given_an_empty_string():
+    music_tracker = MusicTracker()
+    with pytest.raises(Exception) with err:
+        add("")
+        error_message = str(err.value)
+        assert error_message == "No music added"
+"""
+given a string with a song
+it will return list with the song added to it
+"""
+def test_given_song_returns_list_with_song_added():
+    music_tracker = MusicTracker()
+    music_tracker.add("Rebecca Black - Friday")
+    result = music_tracker.song_list
+    assert result == ["Rebecca Black - Friday"]
+"""
+given more than one song
+it will return list with all the songs added
+"""
+def test_without_completed_task():
+    music_tracker = MusicTracker()
+    music_tracker.add("Rebecca Black - Friday")
+    music_tracker.add("Justin Bieber - Baby")
+    music_tracker.add("Beyonce - Single Ladies")
+    music_tracker.add("Kanye West - All of the lights")
+    assert result == ["Rebecca Black - Friday", "Justin Bieber - Baby", "Beyonce - Single Ladies", "Kanye West - All of the lights"]
+
+""" given wrong data type
+def 
+
+4. Implement the Behaviour
+After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
+
+class MusicTracker:
+    def add(self, text):
+    a string representing music you have listened to
+    returns a strings of music listened to in a list.
+
+    return [text]
+    
+
