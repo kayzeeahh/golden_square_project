@@ -7,4 +7,5 @@ class MusicTracker:
             raise Exception("No music added")
         self.song_list.append(string)
         
-        
+    def all(self):
+        return self.song_list
